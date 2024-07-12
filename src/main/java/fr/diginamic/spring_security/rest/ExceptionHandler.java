@@ -1,4 +1,4 @@
-package fr.diginamic.spring_security.controleurs;
+package fr.diginamic.spring_security.rest;
 
 import fr.diginamic.spring_security.utilitaire.AnomalieException;
 import org.springframework.http.ResponseEntity;

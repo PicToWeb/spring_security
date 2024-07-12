@@ -2,24 +2,27 @@ package fr.diginamic.spring_security.dto;
 
 public class VilleDTO {
 
-	private int id;
+	public int id;
 	
-	private String name; 
+	public String name;
 	
-	private int nbHab;
+	public int nbHab;
 	
-	private String departementName;
+	public String departementName;
+
+	public String departementCode;
 
 	/** Constructor
 	 * @param id
 	 * @param name
 	 * @param departementName
 	 */
-	public VilleDTO(int id, String name,int nbHab, String departementName) {
+	public VilleDTO(int id, String name,int nbHab, String departementName,String departementCode) {
 		this.id = id;
 		this.name = name;
 		this.nbHab=nbHab;
 		this.departementName = departementName;
+		this.departementCode = departementCode;
 	}
 	
 	public VilleDTO() {

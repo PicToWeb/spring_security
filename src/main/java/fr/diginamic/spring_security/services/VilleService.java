@@ -38,7 +38,7 @@ public class VilleService {
 
 	public VilleDTO convertirVilleDto(VilleTp6 ville) {
 		if (ville != null) {
-			return new VilleDTO(ville.getId(), ville.getNom(),ville.getNbHabitants(), ville.getDepartement().getNom());
+			return new VilleDTO(ville.getId(), ville.getNom(),ville.getNbHabitants(), ville.getDepartement().getNom(),ville.getDepartement().getCodeDep());
 		}
 		return null;
 	}

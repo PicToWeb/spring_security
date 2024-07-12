@@ -27,15 +27,19 @@ import org.springframework.web.client.RestTemplate;
 public class DepartementService {
 
 	/** departementRepository */
-	@Autowired
-	private DepartementRepository departementRepository;
+	private final DepartementRepository departementRepository;
 
 	/** liste */
 	private List<DepartementTp6> liste = new ArrayList<>();
 
 	private List<DepartementApiDTO>listeDepApi = new ArrayList<>();
 
-	/**
+	@Autowired
+    public DepartementService(DepartementRepository departementRepository) {
+        this.departementRepository = departementRepository;
+    }
+
+    /**
 	 * Constructeur utilisé pour charger la liste des départements présent en base
 	 * de données
 	 * 
@@ -148,7 +152,7 @@ public class DepartementService {
 	public DepartementDTO convertirDepartementDto(DepartementTp6 departement) {
 		if (departement != null) {
 			return new DepartementDTO(departement.getCodeDep(), departement.getNom(), departement.getVilles().stream()
-					.map(v ->new VilleDTO(v.getId(), v.getNom(),v.getNbHabitants(), v.getDepartement().getNom())).toList(),compterPopulation(departement.getVilles()));
+					.map(v ->new VilleDTO(v.getId(), v.getNom(),v.getNbHabitants(), v.getDepartement().getNom(),v.getDepartement().getCodeDep())).toList(),compterPopulation(departement.getVilles()));
 		}
 		return null;
 	}

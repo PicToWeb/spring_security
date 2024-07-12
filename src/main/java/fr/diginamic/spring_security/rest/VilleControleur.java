@@ -1,4 +1,4 @@
-package fr.diginamic.spring_security.controleurs;
+package fr.diginamic.spring_security.rest;
 
 import fr.diginamic.spring_security.dto.VilleDTO;
 import fr.diginamic.spring_security.entity.DepartementTp6;
@@ -62,6 +62,8 @@ public class VilleControleur {
     public ResponseEntity<Iterable<VilleTp6>> extraireVilles() {
         return ResponseEntity.ok(villeService.extractVilles());
     }
+
+
 
     @GetMapping("/csvMinHab/{min}")
     public void ficheCsv(@PathVariable int min, HttpServletResponse response) throws IOException {

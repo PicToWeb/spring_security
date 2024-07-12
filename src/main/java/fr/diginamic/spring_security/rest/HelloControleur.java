@@ -1,4 +1,4 @@
-package fr.diginamic.spring_security.controleurs;
+package fr.diginamic.spring_security.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

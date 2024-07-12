@@ -5,10 +5,10 @@ import java.util.List;
 
 public class DepartementDTO {
 
-	private String codeDep;
-	private String nom;
-	private int nbHabitants;
-	private List<VilleDTO> villes = new ArrayList<>();
+	public String codeDep;
+	public String nom;
+	public int nbHabitants;
+	public List<VilleDTO> villes = new ArrayList<>();
 
 	/**
 	 * Constructor

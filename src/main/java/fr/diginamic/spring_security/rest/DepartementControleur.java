@@ -1,4 +1,4 @@
-package fr.diginamic.spring_security.controleurs;
+package fr.diginamic.spring_security.rest;
 
 import java.io.IOException;
 import java.util.List;
