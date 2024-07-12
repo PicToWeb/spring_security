@@ -2,15 +2,15 @@ package fr.diginamic.spring_security.dto;
 
 public class VilleDTO {
 
-	public int id;
+	private int id;
 	
-	public String name;
+	private String name;
 	
-	public int nbHab;
+	private int nbHab;
 	
-	public String departementName;
+	private String departementName;
 
-	public String departementCode;
+	private String departementCode;
 
 	/** Constructor
 	 * @param id
@@ -68,8 +68,9 @@ public class VilleDTO {
 	public String getDepartementName() {
 		return departementName;
 	}
-	
-	
-	
-	
+
+	public String getDepartementCode() {
+		return departementCode;
+	}
+
 }

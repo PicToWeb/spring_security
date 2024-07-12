@@ -5,17 +5,17 @@ import java.util.List;
 
 public class DepartementDTO {
 
-	public String codeDep;
-	public String nom;
-	public int nbHabitants;
-	public List<VilleDTO> villes = new ArrayList<>();
+	private String codeDep;
+	private String nom;
+	private int nbHabitants;
+	private List<VilleDTO> villes = new ArrayList<>();
 
 	/**
-	 * Constructor
-	 * 
-	 * @param id
+	 *
+	 * @param codeDep
 	 * @param nom
 	 * @param villes
+	 * @param nbHabitants
 	 */
 	public DepartementDTO(String codeDep, String nom, List<VilleDTO> villes, int nbHabitants) {
 		super();

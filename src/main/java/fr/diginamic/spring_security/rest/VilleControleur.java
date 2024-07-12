@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/villes")
+@RequestMapping("/api/villes")
 public class VilleControleur {
 
     /**

@@ -28,7 +28,7 @@ import fr.diginamic.spring_security.services.DepartementService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/departements")
+@RequestMapping("/api/departements")
 public class DepartementControleur {
 
 	@Autowired

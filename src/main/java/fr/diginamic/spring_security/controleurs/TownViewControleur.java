@@ -27,6 +27,7 @@ public class TownViewControleur {
         model.addAttribute("towns", townList);
         return "town/townList";
     }
+
     @GetMapping("/deleteTown/{id}")
     public String deleteTown(@PathVariable int id) {
         villeService.supprimerVille(id);
