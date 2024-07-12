@@ -16,6 +16,7 @@ target/
 /bin/
 /target/
 *.class
+secret.properties
 
 ### IntelliJ IDEA ###
 .idea
