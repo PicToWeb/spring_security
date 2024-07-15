@@ -52,6 +52,12 @@ public class VilleTp6 implements EnsemblePop {
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
 	}
+
+	public VilleTp6(String nom, int nbHabitants, DepartementTp6 departement) {
+		this.nom = nom;
+		this.nbHabitants = nbHabitants;
+		this.departement = departement;
+	}
 	
 	
 	@Override

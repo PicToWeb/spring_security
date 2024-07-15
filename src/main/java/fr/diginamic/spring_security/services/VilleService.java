@@ -5,6 +5,7 @@ import fr.diginamic.spring_security.entity.DepartementTp6;
 import fr.diginamic.spring_security.entity.VilleTp6;
 import fr.diginamic.spring_security.repositories.VilleRepository;
 import fr.diginamic.spring_security.utilitaire.PopComparateur;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,20 @@ public class VilleService {
 	@Autowired
 	private DepartementService departementService;
 
+	@PostConstruct
+	public void init() {
+		DepartementTp6 dep1 = new DepartementTp6("34","Hérault");
+		DepartementTp6 dep2 = new DepartementTp6("13","Marseille");
+		departementService.insertDepartement(dep1);
+		departementService.insertDepartement(dep2);
+		create(new VilleTp6("Montpellier", 150000,dep1));
+		create(new VilleTp6("Nantes", 250000,dep2));
+		create(new VilleTp6("Montpellier", 350000,dep1));
+	}
+
+	public void create(VilleTp6 ville) {
+		villeRepository.save(ville);
+	}
 	/**
 	 * Méthode qui extrait toutes les villes de la base de donnée
 	 * 

@@ -44,13 +44,15 @@ public class DepartementService {
 	 * de données
 	 * 
 	 */
-	@PostConstruct
-	public void initDonne() {
-		this.liste = extractDepartement();
-	}
 
-	@PostConstruct
-	public void initDepVille(){this.listeDepApi = extractDepApi(); }
+//	@PostConstruct
+//	public void initDonne() {
+//		this.liste = extractDepartement();
+//	}
+//
+//	@PostConstruct
+//	public void initDepVille(){this.listeDepApi = extractDepApi(); }
+
 
 	/**
 	 * Methode utilisée pour récuper tous les départements présents en base de
@@ -135,8 +137,8 @@ public class DepartementService {
 	public void insertDepartement(DepartementTp6 departement) {
 		DepartementTp6 departementEnBase = extractDepCode(departement.getCodeDep());
 		if (departementEnBase == null) {
-			String nomDep = addName(departement.getCodeDep());
-			departement.setNom(nomDep);
+//			String nomDep = addName(departement.getCodeDep());
+//			departement.setNom(nomDep);
 			departementRepository.save(departement);
 			liste.add(departement);
 		}
